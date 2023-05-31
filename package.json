@@ -1,0 +1,11 @@
+{
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {}
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.6"
+  },
+  "name": "playground",
+  "version": "0.1.0"
+}
