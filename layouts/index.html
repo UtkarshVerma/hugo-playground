@@ -7,7 +7,7 @@
   </head>
   <body>
     {{ site.Params.Description }}
-    {{ partial "js" "named.ts" }}
-    {{ partial "js" "file.ts" }}
+
+    {{ partialCached "css" "named.ts" }}
   </body>
 </html>

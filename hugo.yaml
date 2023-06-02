@@ -2,7 +2,11 @@ title: Hugo Playground
 
 params:
   description: |
-    ESBuild's tree shaking doesn't seem to be working.
+    PostProcess edge-case where partialCached with PostProcess does not
+    generate CSS.
+
+    In this example, SCSS is post-processed in production only and CSS is only
+    generated for non-production builds.
 
 disableKinds:
   - taxonomy
@@ -11,7 +15,3 @@ disableKinds:
 outputs:
   home:
     - HTML
-
-module:
-  imports:
-    - path: github.com/UtkarshVerma/hugo-modules/bootstrap-v5

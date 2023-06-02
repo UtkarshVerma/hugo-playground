@@ -1,0 +1,15 @@
+{{ $css := resources.Get "main.scss" | toCSS }}
+{{ with $css }}
+  {{ if hugo.IsProduction }}
+    {{ with . | fingerprint | resources.PostProcess }}
+      <link
+        rel="stylesheet"
+        href="{{ .RelPermalink }}"
+        integrity="{{ .Data.Integrity }}"
+        crossorigin="anonymous"
+      />
+    {{ end }}
+  {{ else }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+  {{ end }}
+{{ end }}
